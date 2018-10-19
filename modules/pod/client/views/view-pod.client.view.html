@@ -1,0 +1,91 @@
+<section>
+  <div class="container" style="padding-top: 50px;">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{ vm.pod.firstName }} {{ vm.pod.lastName }}</h3>
+          </div>
+
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-3 col-lg-3">
+                <img alt="User Picture" src="vm.pod.profileImageURL" class="img-circle img-responsive">
+              </div>
+
+              <div class="col-md-9 col-lg-9">
+                <table class="table table-user-information">
+                  <tbody>
+                    <tr>
+                      <h1 id="table-header">General Information</h1>
+                    </tr>
+                    <tr>
+                      <td>First Name:</td>
+                      <td>{{ vm.pod.firstName }}</td>
+                    </tr>
+                    <tr>
+                      <td>Last Name:</td>
+                      <td>{{ vm.pod.lastName }}</td>
+                    </tr>
+                    <tr ng-if="vm.pod.age">
+                      <td>Age:</td>
+                      <td>{{ vm.pod.age }}</td>
+                    </tr>
+                    <tr ng-if="vm.pod.gender">
+                      <td>Gender:</td>
+                      <td>{{ vm.pod.gender }}</td>
+                    </tr>
+                    <tr ng-if="vm.pod.description">
+                      <td>Description:</td>
+                      <td>{{ vm.pod.description }}</td>
+                    </tr>
+                    <tr ng-if="vm.pod.phone.house">
+                      <td>House Phone Number:</td>
+                      <td>{{ vm.pod.phone.house }}</td>
+                    </tr>
+                    <tr ng-if="vm.pod.phone.mobile">
+                      <td>Mobile Phone Number:</td>
+                      <td>{{ vm.pod.phone.mobile }}</td>
+                    </tr>
+                    <tr ng-if="vm.pod.history" ng-repeat="history in vm.pod.history">
+                      <td>History:</td>
+                      <td>{{ history }}</td>
+                    </tr>
+                    <tr>
+                      <td>Username:</td>
+                      <td>{{ vm.pod.username }}</td>
+                    </tr>
+                    <tr>
+                      <td>Address - Line 1:</td>
+                      <td>{{ vm.pod.address.line1 }}</td>
+                    </tr>
+                    <tr>
+                      <td>Address - Line 2:</td>
+                      <td>{{ vm.pod.address.line2 }}</td>
+                    </tr>
+                    <tr>
+                      <td>Address - Line 3:</td>
+                      <td>{{ vm.pod.address.line3 }}</td>
+                    </tr>
+                    <tr>
+                      <td>Address - Postcode:</td>
+                      <td>{{ vm.pod.address.postcode }}</td>
+                    </tr>
+                    <tr>
+                      <td>Address - County:</td>
+                      <td>{{ vm.pod.address.county }}</td>
+                    </tr>
+                    <tr>
+                      <td>Address - City:</td>
+                      <td>{{ vm.pod.address.city }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

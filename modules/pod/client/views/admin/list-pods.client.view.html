@@ -1,0 +1,26 @@
+<section>
+  <div class="page-header">
+    <h1>Pods
+      <a class="btn btn-primary pull-right" data-ui-sref="admin.pods.create">
+        <i class="glyphicon glyphicon-plus"></i>
+      </a>
+    </h1>
+  </div>
+
+  <div class="list-group">
+    <a data-ng-repeat="pod in vm.pods" data-ui-sref="admin.pods.edit({podId: pod._id})" class="list-group-item">
+      <small class="list-group-item-text">
+        Created on
+        <span data-ng-bind="pod.created | date: 'mediumDate'"></span>
+        by
+        <span ng-if="pod.user" ng-bind="pod.user.displayName"></span>
+        <span ng-if="!pod.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" data-ng-bind="pod.username"></h4>
+      <p class="list-group-item-text" data-ng-bind="pod.address.line1"></p>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" data-ng-if="vm.pods.$resolved && !vm.pods.length">
+    No pod members yet, why don't you <a data-ui-sref="admin.pods.create">create one</a>?
+  </div>
+</section>

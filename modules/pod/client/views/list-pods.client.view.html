@@ -1,0 +1,19 @@
+<section>
+  <div class="page-header">
+    <h1>Pod Member List</h1>
+  </div>
+
+  <div class="list-group">
+    <a ng-repeat="pod in vm.pods" ui-sref="pods.view({ podId: pod._id })" class="list-group-item">
+      <small class="list-group-item-text">
+        Created on
+        <span ng-bind="pod.created | date: 'mediumDate'"></span>
+        by
+        <span ng-if="pod.user" ng-bind="pod.user.displayName"></span>
+        <span ng-if="!pod.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading">{{ pod.firstName }} {{ pod.lastName }}</h4>
+      <p class="list-group-item-text" ng-bind="pod.username"></p>
+    </a>
+  </div>
+</section>

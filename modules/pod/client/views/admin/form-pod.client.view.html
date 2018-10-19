@@ -1,0 +1,278 @@
+<div class="page-header">
+  <h1>{{vm.pod._id ? 'Edit Pod' : 'New Pod'}}</h1>
+</div>
+
+<div class="pull-right">
+  <a ng-show="vm.pod._id" class="btn btn-primary" ng-click="vm.remove()">
+    <i class="glyphicon glyphicon-trash"></i>
+  </a>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="text-center">
+        <img src="http://res.cloudinary.com/thasvmdcrw/image/upload/v1478085868/kong4_jiahba.jpg" class="avatar img-circle" alt="avatar" width="350px">
+      </div>
+    </div>
+
+    <div class="col-md-9 personal-Info">
+      <h3 class="text-center" style="padding-bottom: 20px;">Personal Information:</h3>
+
+      <form name="vm.form.podForm" class="form-horizontal" ng-submit="vm.save(vm.form.podForm.$valid)" novalidate>
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="username">Username:</label>
+          <div class="col-lg-8">
+            <input name="username" type="text" ng-model="vm.pod.username" id="username" class="form-control" placeholder="{{ vm.pod.username || 'Your username' }}" required autofocus>
+            <div ng-messages="vm.form.podForm.username.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Username is required.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="firstName">First Name:</label>
+          <div class="col-lg-8">
+            <input name="firstName" type="text" ng-model="vm.pod.firstName" id="firstName" class="form-control" placeholder="{{ vm.pod.firstName || 'First name' }}" required autofocus>
+            <div ng-messages="vm.form.podForm.firstName.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">First name is required.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="lastName">Last Name:</label>
+          <div class="col-lg-8">
+            <input name="lastName" type="text" ng-model="vm.pod.lastName" id="lastName" class="form-control" placeholder="{{ vm.pod.lastName || 'Last name' }}" required autofocus>
+            <div ng-messages="vm.form.podForm.lastName.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Last name is required.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="age">Age:</label>
+          <div class="col-lg-8">
+            <select name="age" class="form-control">
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="gender">Gender:</label>
+          <div class="col-lg-8">
+            <select name="gender" id="gender" ng-model="vm.pod.gender" class="form-control" required autofocus>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Prefer Not To Say">Prefer Not To Say</option>
+            </select>
+            <div ng-messages="vm.form.podForm.gender.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Gender is required.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="description">Description:</label>
+          <div class="col-lg-8">
+            <textarea name="description" id="description" rows="5" columns="10" ng-model="vm.pod.description" style="width:100%" class="form-control" placeholder="{{ vm.pod.description || 'A little description about yourself' }}"></textarea>
+            <div ng-messages="vm.form.podForm.description.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Description is required.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-3 control-label" for="homeNumber">House Number:</label>
+          <div class="col-lg-8">
+            <input name="houseNumber" type="text" ng-model="vm.pod.phone.house" id="homeNumber" class="form-control" placeholder="{{ vm.pod.phone.house || '0161 000 000' }}" required autofocus>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-3 control-label" for="mobile">Mobile Number:</label>
+          <div class="col-lg-8">
+            <input name="mobile" type="text" ng-model="vm.pod.phone.mobile" id="mobile" class="form-control" placeholder="{{ vm.pod.phone.mobile || '07XXXXXXXXX' }}" required autofocus>
+          </div>
+        </div>
+
+        <hr>
+
+        <h3 class="text-center" style="padding-bottom: 20px;">Address:</h3>
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="line1">Address Line 1:</label>
+          <div class="col-lg-8">
+            <input name="line1" type="text" ng-model="vm.pod.address.line1" id="line1" class="form-control" placeholder="{{ vm.pod.address.line1 || 'The first line of your address' }}" required autofocus>
+            <div ng-messages="vm.form.podForm.address.line1.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Address line 1 is required.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="line2">Address Line 2:</label>
+          <div class="col-lg-8">
+            <input name="line2" type="text" ng-model="vm.pod.address.line2" id="line2" class="form-control" placeholder="{{ vm.pod.address.line2 || 'The second line of your address' }}">
+            <div ng-messages="vm.forn.podForm.address.line2.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Address line 2 is required.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-3 control-label" for="line3">Address Line 3:</label>
+          <div class="col-lg-8">
+            <input name="line3" type="text" ng-model="vm.pod.address.line3" id="line3" class="form-control" placeholder="{{ vm.pod.address.line3 || 'The third line of your address if you hae=ve one (not required)' }}">
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="postcode">Postcode:</label>
+          <div class="col-lg-8">
+            <input name="postcode" type="text" ng-model="vm.pod.address.postcode" id="postcode" class="form-control" placeholder="{{ vm.pod.address.postcode || 'Your postcode' }}" required autofocus>
+            <div ng-messages="vm.form.podForm.address.postcode.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Your postcode is required.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="county">County:</label>
+          <div class="col-lg-8">
+            <input name="county" type="text" ng-model="vm.pod.address.county" id="county" class="form-control" placeholder="{{ vm.pod.address.county || 'Your county' }}" required autofocus>
+            <div ng-messages="vm.form.podForm.address.county.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Your county is required.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="city">City</label>
+          <div class="col-lg-8">
+            <input name="city" type="text" ng-model="vm.pod.address.city" id="city" class="form-control" placeholder="{{ vm.pod.address.city || 'Your city' }}" required autofocus>
+            <div ng-messages="vm.form.podForm.address.city.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Your city is required.</p>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <h3 class="text-center" style="padding-bottom: 20px;">Additional Information:</h3>
+
+        <div class="form-group">
+          <label class="col-lg-3 control-label" for="skills">Skills:</label>
+          <div class="col-lg-8">
+            <div ng-repeat="skills in vm.pod.information.skills">
+              <p>{{ skills }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-3 control-label" for="credits">Credits:</label>
+          <div class="col-lg-8">
+            <input name="credits" type="text" ng-model="vm.pod.information.credits" id="credits" class="form-control" placeholder="{{ vm.pod.information.credits || 'Any praise from previous employers? Here\'s your chance to show it off' }}">
+          </div>
+        </div>
+
+        <hr>
+
+        <h3 class="text-center" style="padding-bottom: 20px;">Work History</h3>
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="companyName1">Company1 - Name:</label>
+          <div class="col-lg-8">
+            <input name="companyName1" type="text" ng-model="vm.pod.information.workHistory.company1.companyName" id="companyName1" class="form-control" placeholder="{{ vm.pod.information.workHistory.company1.companyName || 'Companies name who you used to work for' }}" required autofocus>
+            <div ng-messages="vm.form.podForm.information.workHistory.company1.companyName" role="alert">
+              <p class="help-block error-text" ng-message="required">Your companies name who you used to work for is required.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="timeWorked1">Company1 - Time Worked:</label>
+          <div class="col-lg-8">
+            <input name="timeWorked1" type="text" ng-model="vm.pod.information.workHistory.company1.timeWorked" id="timeWorked1" class="form-control" placeholder="{{ vm.pod.information.workHistory.company1.timeWorked || 'How long did you work there for?' }}" required autofocus>
+            <div ng-messages="vm.form.podForm.information.workHistory.company1.timeWorked" role="alert">
+              <p class="help-block error-text" ng-message="required">The amount of time you worked there for is required.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="jobTitle1">Company1 - Job Title:</label>
+          <div class="col-lg-8">
+            <input name="jobTitle1" type="text" ng-model="vm.pod.information.workHistory.company1.jobTitle" id="jobTitle1" class="form-control" placeholder="{{ vm.pod.information.workHistory.company1.jobTitle || 'Your job title' }}" required autofocus>
+            <div ng-messages="vm.form.podForm.information.workHistory.company1.jobTitle" role="alert">
+              <p class="help-block error-text" ng-message="required">Your job title is required.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
+          <label class="col-lg-3 control-label" for="jobDescription1">Company1 - Job Description:</label>
+          <div class="col-lg-8">
+            <input name="jobDescription1" type="text" ng-model="vm.pod.information.workHistory.company1.jobDescription" id="jobDescription1" class="form-control" placeholder="{{ vm.pod.information.workHistory.company1.jobDescription || 'Your job description' }}" required autofocus>
+            <div ng-messages="vm.form.podForm.information.workHistory.company1.jobDescription" role="alert">
+              <p class="help-block error-text" ng-message="required">Your job description is required</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-lg-3 control-label" for="companyAddressLine1">Company1 - Address Line 1:</label>
+          <div class="col-lg-8">
+            <input name="companyAddressLine1" type="text" ng-model="vm.pod.information.workHistory.company1.address.line1" id="companyAddressLine1" class="form-control" placeholder="{{ vm.pod.information.workHistory.company1.address.line1 || 'The companies first line of address' }}" required autofocus>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.pod._id ? 'Update' : 'Create'}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

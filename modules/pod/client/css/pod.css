@@ -1,0 +1,1413 @@
+/* CSS Document
+
+@font-face {
+    font-family: 'futura';
+    src: url("../fonts/Futura-Book.ttf");
+} */
+
+/*--------------------------------ALL PAGES----------------------------------------*/
+* {
+	font-family: Futura, verdana;
+}
+
+.logoText {
+	float: left;
+	height: 50px;
+	font-size: 18px;
+	line-height: 20px;
+	background-color: white;
+}
+body, html { overflow-x:hidden;}
+
+#black {
+	color:black;
+}
+
+a, a:hover {
+	text-decoration: none;
+	color:white;
+}
+.mt-25 {
+	margin-top: 25px;
+}
+
+.mb-25 {
+	margin-bottom: 25px;
+}
+
+.mb-t-25 {
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+.padd-10 {
+	padding: 10px;
+}
+
+.row2 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* .row > [class*='col-'] {
+	display: flex;
+	flex-direction: row;
+} */
+
+
+* p {
+	font-family:futura, verdana;
+}
+
+h1, .boldheader {
+	font-family: Futura, verdana;
+	text-align:center;
+	font-size: 26px;
+	padding-bottom:20px;
+	/*padding-top: 4%;*/
+}
+
+p{
+	font-size:13px;
+}
+
+#color{
+	color:white;
+	transition-duration: 0.6s;
+	list-style-type: none;
+}
+
+#color:hover{
+	color:white;
+	background-color:#1c1c1c;
+}
+
+.color{
+	color:white;
+	transition-duration: 0.6s;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+
+/* NAV  */
+#navColor{
+	background-color:#484369;
+	transition-duration: 0.6s;
+}
+nav {
+	margin: 0 auto;
+	text-align:center;
+
+}
+
+/*JUMBOTRON STYLE*/
+.jumbotron {
+	text-align: center;
+	border-radius: 25px;
+	background-color: white;
+	padding: 0px;
+	margin: 0 auto;
+	margin-bottom:30px;
+	margin-top:30px;
+	clear: both;
+}
+
+/* LOGO  */
+#logo{
+
+	width:60%;
+	height:50%
+}
+
+
+@media screen and (min-width: 330px) {
+	#logo{
+			width:60%;
+			height:50%
+	}
+}
+
+
+
+/* CONTAINER  */
+.bodyContainer {
+	text-align: center;
+	padding: 2%;
+	clear: both;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* BUTTONS  */
+/* button {
+	background-color: #6e6e9a;
+	border: none;
+	color: white;
+	padding: 5px 5px;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 2px;
+	margin:4px;
+}
+button:hover {
+	background-color: #1c1c1c;
+} */
+.vpButton{
+	padding-top: 0px;
+}
+.profilesButton{
+	margin-top:20px;
+}
+
+/* TABLE  */
+table{
+	margin:3%;
+	margin-bottom: 30px;
+}
+
+td, th{
+	font-size:13px;
+	padding:13px;
+}
+
+th {
+	padding:10px;
+	color: white;
+	text-align:center;
+}
+.trcolor{
+	background-color:#8a87a2;
+}
+
+/* MEDIA QUERY FOR ALL TABLES  */
+@media screen and (min-width: 330px) {
+	table{
+			margin:1%;
+			min-width:100%;
+			margin-bottom: 30px;
+	}
+
+}
+
+/* button {
+	background-color: #6e6e9a;
+	border: none;
+	color: white;
+	padding: 5px 15px;
+	text-align: center;
+	display: inline-block;
+	font-size: 18px;
+	cursor: pointer;
+	border-radius: 2px;
+	margin:4px;
+
+} */
+
+/* SIDENAV STYLING*/
+
+#sidenav {
+	list-style-type: none;
+	margin: 0;
+	padding: 5px;
+	padding-left:10px;
+	height: 55%;
+	overflow: auto;
+	clear: both;
+	text-align: left;
+	float: left;
+	border-radius: 2px;
+}
+
+#mysidenav{
+	list-style-type: none;
+	margin: 0;
+	padding: 5px;
+	padding-left:10px;
+	height: 55%;
+	width:20%;
+	overflow: auto;
+	clear: both;
+	background-color:white;
+	text-align: left;
+	float: left;
+	border-radius: 2px;
+}
+
+li a {
+	display: block;
+	color: #1c1c1c;
+	padding: 8px 0 0px 25px;
+	text-decoration: none;
+	padding:8px;
+}
+
+
+#notification{
+	float:right;
+	padding: 14px 0 0px 25px;
+	list-style-type: none;
+}
+
+#searchbar{
+	height:15px;
+	width:15px;
+	margin:1px;
+}
+#quick {
+	border-radius: 2px;
+	position: absolute;
+	padding-top:5px;
+}
+
+#pic{
+	width:60%;
+	stroke:#8e8db7;
+	stroke-width:4;
+	margin: auto;
+}
+
+#pic2{
+	width:20%;
+	stroke:#8e8db7;
+	stroke-width:4;
+	margin: 0 auto;
+	width:50px;
+	height:50px;
+	margin-bottom: 13px;
+}
+
+/* FORMS  */
+form {
+	text-align: center;
+	padding-top: 10px;
+}
+label.formLabel {
+	display: block;
+	margin:10px;
+	padding:10px;
+	margin: 0 auto;
+	width: 300px;
+	font-family: Futura, verdana;
+}
+label {
+	display: inline-block;
+	width: 120px;
+	font-family:Futura, verdana;
+}
+#legend{
+	color: #515078;
+	font-size: 20px;
+	font-family: Futura, verdana;
+	padding-top: 10%;
+}
+#legendLeft{
+	text-align:left;
+	font-size:18px;
+	font-family: Futura, verdana;
+}
+
+#legendCenter{
+	text-align:center;
+	font-size:24px;
+	font-family: Futura, verdana;
+	padding-bottom:10px;
+	padding-top:30px;
+}
+
+.astrex {
+	display: none;
+}
+
+#enquiryType, #travel, #personalMessage, #optionalMessage{
+	padding: 3px;
+	margin: 10px;
+}
+
+/* FOOTER  */
+footer {
+	background-color: #b1b2d2;
+	color: #1c1c1c;
+	text-align: center;
+}
+
+#Copyright{
+	padding-top: 2.5%;
+}
+
+#footlogo {
+	width:30%;
+	margin:0 auto;
+	margin-top:10px;
+	padding-left: 13px;
+}
+
+#white {
+	color: white;
+}
+
+/*-MEDIA QUERIES-*/
+
+@media screen and (min-width: 600px) {
+	#footlogo {
+			width:55%;
+			margin-left:3%;
+			margin-top:1%;
+	}
+
+	#Copyright{
+			margin:5px;
+			margin-top:-5%;
+	}
+}
+
+/*SOCIAL MEDIA BUTTONS IN FOOTER*/
+
+#youtube:hover{
+	color:#bb0000;
+}
+
+#facebook:hover{
+	color:#3b5998;
+}
+
+#twitter:hover{
+	color:#00aced;
+}
+
+#contact:hover{
+	color:#555b8f;
+}
+i {
+	color:white;
+
+}
+
+
+/*-MEDIA QUERIES-*/
+
+@media screen and (min-width: 600px) {
+	i {
+			color:white;
+			margin:30px;
+	}
+}
+
+#spaceBottom{
+	margin-bottom:20px;
+}
+
+/*HEXAGON PROFILE IMAGE STYLING*/
+
+.podPic{
+	width:30%;
+	stroke: #8e8db7;
+	stroke-width: 4;
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.historicPic{
+	width:60%;
+	stroke: #8e8db7;
+	stroke-width: 4;
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.currentPic{
+	width:40%;
+	stroke: #8e8db7;
+	stroke-width: 4;
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+svg {
+	width:60%;
+	stroke: #8e8db7;
+	stroke-width: 4;
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+#padd{
+	margin-right:30px;
+}
+
+
+/*--------------------------------INDEX PAGE----------------------------------------*/
+#backColor{
+	background-color:#6c7099;
+}
+
+#arrow{
+	padding:10px;
+	margin:10px;
+}
+
+#introheading {
+	color: white;
+	font-size: 60px;
+	padding-bottom: 5%;
+	text-align:center;
+	font-family: Futura-Bold, verdana;
+}
+
+#introText {
+	padding:10px;
+	color:white;
+	font-size: 16px;
+	text-align: justify;
+	line-height: 1.5em;
+	padding-left: 18%;
+	padding-right:18%;
+	margin-bottom:10%;
+}
+
+#hexstyle{
+	height:40%;
+	width:40%;
+	padding: 10px;
+	margin: 0 auto;
+	padding-top:0%;
+	text-align: center;
+	margin-bottom:20px;
+}
+
+#sharpfutures{
+	color:white;
+}
+
+#sharpfutures:hover{
+	color:black;
+	background-color:white;
+}
+
+/*-MEDIA QUERIES-*/
+
+@media screen and (min-width: 600px) {
+	#introheading {
+			color: white;
+			font-size: 70px;
+			padding-top:2%;
+			padding-bottom: 3%;
+			text-align:center;
+			font-family: Futura-Bold, verdana;
+	}
+
+	#hexstyle {
+			padding:10px;
+			height:20%;
+			width:20%;
+			padding: 20px;
+			margin: 0 auto;
+			margin-bottom:3%;
+	}
+
+	#introText {
+			padding:10px;
+			color:white;
+			font-size: 16px;
+			text-align: justify;
+			line-height: 1.5em;
+			padding-left: 27%;
+			padding-right:25%;
+			margin-bottom:3%;
+	}
+}
+
+#email {
+	padding-bottom: 10%;
+	border-bottom: 1px solid white;
+}
+/*---------------------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------LOGIN PAGE START----------------------------------------*/
+#divContainer2 {
+	height: 275px;
+	width: 275px;
+	margin: 0 auto;
+	margin-bottom:40px;
+}
+
+#introDiv {
+	height: 275px;
+	width: 275px;
+	margin: 0 auto;
+	position: absolute;
+	text-align: center;
+	padding-top: 1px;
+	background-image: url(../img/login.jpg);
+	background-repeat: no-repeat;
+	background-size: 275px 275px;
+}
+
+/*BUTTON STYLING*/
+
+.buttonlayout {
+	width: 60px;
+	height: 30px;
+	padding: 5px 1.5px;
+	font-size: 12px;
+	font-family: futura, verdana;
+	margin: 5px auto;
+	margin-bottom:3%;
+}
+
+
+
+.displayBlock{
+	display: block;
+	width: 80px;
+	height: 40px;
+	padding: 0px;
+	margin: 0 auto;
+	margin-bottom:10px;
+	font-size: 14px;
+	font-family: futura, verdana;
+}
+
+#logInDiv {
+	height: 275px;
+	width: 275px;
+	margin: 0 auto;
+	position: absolute;
+	padding-top: 0px;
+	background-image: url(../img/login.jpg);
+	background-repeat: no-repeat;
+	background-size: 275px 275px;
+}
+
+#logInForm {
+	margin: 0 auto;
+	width: 200px;
+	margin-top:13%;
+}
+
+input {
+	font-family: Futura, verdana;
+}
+
+input.form {
+	font-family: Futura, verdana;
+	padding: 1.5px;
+	margin: 2px;
+	border-radius: 2px;
+	border: 1px solid #1c1c1c;
+	height: 15px;
+	font-size: 10px;
+	width: 90px;
+	text-align: center;
+	color: #6e6e9a ;
+}
+
+#registerDiv {
+	height: 275px;
+	width: 275px;
+	margin: 0 auto;
+	position: absolute;
+	text-align: center;
+	background-image: url(../img/login.jpg);
+	background-repeat: no-repeat;
+	background-size: 275px 275px;
+}
+#registerForm {
+	text-align: center;
+	margin-top: 20%;
+}
+
+
+/*-----------MEDIA QUERY FOR MOBILE-----------*/
+@media screen and (min-width: 600px) {
+	#divContainer2 {
+			height: 550px;
+			width: 550px;
+			margin: 0 auto;
+			margin-bottom:40px;
+	}
+
+	#introDiv {
+			height: 550px;
+			width: 550px;
+			margin: 0 auto;
+			position: absolute;
+			text-align: center;
+			padding-top: 90px;
+			background-image: url(../img/login.jpg);
+			background-repeat: no-repeat;
+			background-size: 550px 550px;
+	}
+
+	.buttonlayout {
+			width: 150px;
+			height: 60px;
+			padding: 3.5px 3px;
+			font-size: 18px;
+			font-family: futura, verdana;
+			margin: 10px auto;
+			margin:10px;
+	}
+
+
+	.displayBlock{
+			display: block;
+			width: 150px;
+			height: 60px;
+			padding: 3.5px 3px;
+			margin: 0 auto;
+			margin-bottom:20px;
+			font-size: 18px;
+			font-family: 'futura', verdana;
+	}
+
+
+	#logInDiv {
+			height: 550px;
+			width: 550px;
+			margin: 0 auto;
+			position: absolute;
+			padding-top: 11%;
+			background-image: url(../img/login.jpg);
+			background-repeat: no-repeat;
+			background-size: 550px 550px;
+	}
+
+
+	#logInForm {
+			margin: 0 auto;
+			width: 350px;
+	}
+	input.form {
+			font-family: futura italic, verdana;
+			padding: 3px;
+			margin: 10px;
+			border-radius: 2px;
+			border: 1px solid #1c1c1c;
+			height: 30px;
+			font-size: 14px;
+			width: 200px;
+			text-align: center;
+			color: #6e6e9a ;
+	}
+	#registerDiv {
+			height: 550px;
+			width: 550px;
+			margin: 0 auto;
+			position: absolute;
+			text-align: center;
+			background-image: url(../img/login.jpg);
+			background-repeat: no-repeat;
+			background-size: 550px 550px;
+	}
+	#registerForm {
+			text-align: center;
+			margin-top: 22%;
+	}
+
+	label {
+		font-family: Futura, verdana;
+		display: inline-block;
+		width: 220px;
+	}
+
+
+}
+/*--------------------------------LOGIN PAGE FINISH----------------------------------------*/
+
+
+
+
+
+
+/*--------------------------------BOOK NOW PAGE, CONTACT US START----------------------------------------*/
+
+
+.header {
+	padding-top:10%;
+}
+
+.contact{
+	margin-top:-1%;
+}
+
+input.form1, select {
+	font-family: Futura, verdana;
+	width: 100%;
+}
+
+input.form1, placeholder {
+	font-family: Futura, verdana;
+}
+
+.form1, placeholder {
+	font-family: Futura, verdana;
+}
+container, p {
+	font-family: Futura, verdana;
+}
+
+
+textarea {
+	font-family: Futura, verdana;
+	/* padding: 3px;
+	margin: 10px;
+	border-radius: 2px;
+	border: 1px solid #1c1c1c;
+	height: 200px;
+	font-size: 14px;
+	width: 80%;
+	text-align: center;
+	color: #6e6e9a ;*/
+}
+
+/*-MEDIA QUERIES-*/
+@media screen and (min-width: 600px) {
+	input.form1, select{
+			font-family: Futura, verdana;
+			width: 100%;
+	}
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+#thankyou{
+	font-size:14px;
+	padding-top:20px;
+}
+
+/*--------------------------------BOOK NOW, CONTACT US PAGE FINISH----------------------------------------*/
+
+
+
+
+/*--------------------------------CURRENT, HISTORIC BOKINGS  PAGES START---------------------------------------*/
+
+#currentBookingTable, .bookingtr, .bookingtd {
+	text-align:center;
+	margin: 10px;
+}
+.bookingtd {
+	max-width: 400px;
+	min-width: 50px;
+}
+
+.Line {
+	margin:10px;
+	border-bottom: 3px solid #6e6e9a;
+}
+
+#bottomPad{
+	margin-bottom:20px;
+	font-family: futura, verdana;
+	font-size: 14px;
+}
+
+
+/*-------------------------HISTORIC BOKINGS--------------------------*/
+
+
+#reBook{
+	font-size: 13px;
+
+}
+
+/*--------------------------------CURRENT, HISTORIC BOKINGS  PAGES START---------------------------------------*/
+
+
+
+
+/*--------------------------------POD SEARCH PAGE START---------------------------------------*/
+
+#basictitle {
+	text-align: left;
+	padding: 11px;
+	margin: 5px;
+	font-weight: bold;
+}
+
+.podSearchImage{
+	border: 2px solid #4a486d;
+	width:80%;
+}
+
+.Searchpic{
+	width:80%;
+}
+
+#basictxt {
+	text-align: left;
+	padding: 11px;
+	margin: 5px;
+}
+#quote {
+	text-align: left;
+	color: #4a486d;
+	font-size: 12px;
+	font-family: futura, verdana;
+	min-width:40%;
+	height: 90%;
+	overflow: scroll;
+}
+
+#selectBar{
+	background-color:#b1b2d2;
+	color:#1c1c1c;
+	width:60%;
+	margin-left:21%;
+}
+
+#podSearch{
+	width:70%;
+	margin-left:16%;
+}
+
+.profileButton{
+	font-size:12px;
+}
+
+@media screen and (min-width: 900px) {
+	.podSearchImage{
+			border: 2px solid #4a486d;
+			width:50%;
+	}
+
+	#quote {
+			text-align: left;
+			color: #4a486d;
+			font-size: 16px;
+			padding: 10px;
+			padding-top: 65px;
+			padding:10px;
+			padding-left:40px;
+			font-family: futura, verdana;
+			width:100%;
+	}
+
+	#selectBar{
+			height:35px;
+			background-color:#b1b2d2;
+			color:#1c1c1c;
+			margin-left:25px;
+			width:90%;
+	}
+
+	#podSearch{
+			width:90%;
+	}
+
+	.profileButton{
+			font-size:16px;
+	}
+}
+
+
+.hireButton{
+	padding-top: 5px;
+	padding:5px;
+}
+#hireSize{
+	width:70px;
+	height:70px;
+}
+
+.Line, h4 {
+	font-family: futura, verdana;
+}
+/*--------------------------------POD SEARCH PAGE FINISH---------------------------------------*/
+
+
+
+
+
+/*--------------------------------POD PROFILE PAGE START----------------------------------------*/
+
+#bio {
+	margin-top: 20%;
+}
+
+#testimonials {
+	margin-top: 20%;
+}
+
+#desc {
+	text-align: left;
+}
+
+.backButton{
+	float:left;
+}
+
+.nextButton{
+	float:right;
+}
+
+#profilePic{
+	width: 100%;
+	height: 100%;
+}
+
+#myProfilepic{
+	width: 60%;
+	height: 60%;
+}
+
+@media screen and (min-width: 900px) {
+	#profilePic{
+			width: 100%;
+			height: 100%;
+	}
+
+	#myProfilepic{
+			width: 20%;
+			height: 20%;
+	}
+
+}
+
+.center{
+	margin: 0 auto;
+}
+
+#enquire {
+	width: 100px;
+	height: 50px;
+	margin:0px;
+	margin-top:-10px;
+	margin-bottom:3%;
+	font-family: futura, verdana;
+	font-size: 14px;
+}
+
+@media screen and (min-width: 900px) {
+	#enquire {
+			width: 150px;
+			height: 50px;
+			margin:0px;
+			margin-top:-10px;
+			margin-bottom:3%;
+	}
+	.podPic{
+			width:16%;
+			stroke: #8e8db7;
+			stroke-width: 4;
+			display: block;
+			margin-left: auto;
+			margin-right: auto
+	}
+}
+#skillsOutput {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#skillsContainer {
+	height: 650px;
+	/*width:90;*/
+	background-color: #484369;
+	border-radius: 10px 0px 0px 10px;
+	/*overflow: scroll;*/
+	color:white;
+	text-align: center;
+	padding:10px;
+}
+#skilllist {
+	color: white;
+	font-weight: bold;
+	font-family: futura, verdana;
+	font-size: 16px;
+	margin-top: 8%;
+	list-style-type: none;
+
+	text-align: center;
+}
+#bioContainer {
+	height: 650px;
+	/*overflow:scroll;*/
+	background-color: #6c7099;
+	border-radius: 2px;
+	color:white;
+	text-align: center;
+}
+#workHistoryContainer {
+	height: 650px;
+	/*overflow:scroll;*/
+	background-color: #494d70;
+	border-radius: 0px 10px 10px 0px;
+	color:white;
+	text-align: center;
+}
+
+
+
+.editPodButton{
+	border: solid 1px white;
+}
+
+#overlay {
+	display:none;
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:0.9;
+	z-index:99999;
+}
+
+#popup, #popup2, #popup3 {
+	display:none;
+	position:fixed;
+	left:50%;
+	top:50%;
+	width:798px;
+	height:598px;
+	margin-top:-299px;
+	margin-left:-399px;
+	background:#FFFFFF;
+	border:2px solid #000;
+	z-index:100000;
+	overflow:scroll;
+}
+.popupDivs {
+	width: 100%;
+	height: 40%;
+	padding: 15px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-radius: 25px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color:#716F9A;
+	overflow:scroll;
+
+}
+
+@media screen and (min-width: 900px) {
+	.popupDivs {
+			width: 100%;
+			height: 40%;
+			padding: 15px;
+			border-top: 1px solid black;
+			border-bottom: 1px solid black;
+			border-radius: 25px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			background-color:#716F9A;
+			overflow:scroll;
+
+	}
+	#popup, #popup2, #popup3 {
+			display:none;
+			position:fixed;
+			left:50%;
+			top:50%;
+			width:798px;
+			height:598px;
+			margin-top:-299px;
+			margin-left:-399px;
+			background:#FFFFFF;
+			border:2px solid #000;
+			z-index:100000;
+			overflow:scroll;
+	}
+}
+
+#closeButton {
+	float:right;
+	margin: 10px;
+}
+
+.popupTitle {
+	color: black;
+}
+
+.popupOutputDiv {
+	width: 75%;
+	margin: 0 auto;
+	border: 1px solid black;
+	background-color:white;
+	color:black;
+	padding: 10px;
+}
+
+.editSubmitButton {
+	background-color: white;
+	border: solid 1px black;
+	color: black;
+	transition-duration: 0.6s;
+}
+
+.editSubmitButton:hover {
+	background-color: gray;
+}max-10
+
+#iframeVideo {
+	 width: 150px;
+	 height: 100px;
+
+}
+@media screen and (min-width: 768px) {
+	#iframeVideo {
+			height: 300px;
+			width: 500px;
+	}
+}
+/*--------------------------------POD PROFILE PAGE FINISH---------------------------------------*/
+
+
+
+
+
+/*--------------------------------CLIENT PROFILE----------------------------------------*/
+
+/* hide nav button */
+
+#hide{
+	float:left;
+	left:0px;
+	top:0px;
+	margin:5px;
+}
+
+.clear{
+	clear:both;
+}
+
+/*HEXAGON PROFILE IMAGE STYLING*/
+
+
+#profileInfo {
+	width: 90%;
+	height: 750px;
+	background-color: #6a6cae;
+	margin: 0 auto;
+	position: relative;
+	border-radius: 2px;
+	margin-bottom:5%;
+	color:white;
+	padding:10px;
+	text-align:center;
+}
+
+/*.profileback{
+text-align: center;
+	padding: 2%;
+	clear: both;
+	width: 100%;
+	background-image: url(../img/The-Apprentice-Logo.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+} */
+
+
+
+/*.custom-file-upload {
+	padding: 6px 12px;
+	cursor: pointer;
+background-color: none;
+position: absolute;
+right:70px;
+width: 54px;
+}*/
+
+#marginBottom{
+	margin-bottom:12%;
+}
+
+.editClientButton{
+	border: solid 1px white;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+
+/*---------------------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------ABOUT PAGE----------------------------------------*/
+
+.h4padding{
+	margin-left:8%;
+	padding:10px;
+}
+
+.h1padding{
+	margin-top:-2%;
+}
+
+.sharpfutures{
+	margin-bottom:5%;
+}
+
+.aboutText{
+	margin-left:6%;
+	padding-bottom: 6%;
+	max-width:90%;
+	text-align: center;
+	text-align: justify;
+}
+
+#aboutPic{
+	text-align:center;
+	width:100%;
+	padding:0 9% 5% 4%;
+}
+
+.list{
+	margin-left:6%;
+	padding-left:10px;
+	padding-bottom:6%;
+	margin-top:-10%;
+}
+
+.endText{
+	max-width:90%;
+	text-align: center;
+	text-align: justify;
+	padding:0 4% 0 10%;
+}
+
+@media screen and (min-width: 900px) {
+
+	.aboutText{
+			margin-left:6%;
+			max-width:98%;
+	}
+
+	.list{
+			margin-left:6%;
+			padding-left:10px;
+			margin-top:0%;
+	}
+
+	#aboutPic{
+			text-align:center;
+			padding: 28% 9% 0 0;
+	}
+
+	.endText{
+			padding-bottom:10px;
+			max-width:100%;
+			margin-left:-5%;
+	}
+
+	.sharpfutures{
+			padding-bottom:10px;
+			max-width:96%;
+			margin-left:3%;
+	}
+}
+/*---------------------------------------------------------------------*/
+
+
+.options{
+	margin-right:28px;
+	padding:5px;
+}
+
+.nav > li > a
+{
+	color:#1b590f;
+}
+
+.nav > li > a:hover
+{
+	text-decoration: none;
+	background-color: #3b5998;
+}
+
+#portfolioContainer {
+	width: 100%;
+	background-color: #677080;
+	border-top: 10px solid black;
+	padding-top: 50px;
+	padding-bottom: 100px;
+	margin: 0 auto;
+}
+#portfolio {
+	width: 85%;
+	/*border: solid 1px black;*/
+	margin: 0 auto;
+	padding: 10px;
+	background-color: #484369;
+	text-align: center;
+	color: white;
+	margin-bottom:2%;
+	border-radius:10px;
+}
+#portfolio-upload-placeholder-div {
+	background-image: url('../img/crossBlack.png');
+	background-size:cover;
+	background-position: center;
+	height: 260px; width: 260px;
+	margin: 5.9px;
+	border: 1px solid #bbb;
+	float:left;
+}
+#portfolio-upload-divs{
+	background-image:url('');
+	background-size:cover;
+	background-position: center;
+	background-color: white;
+	height: 260px; width: 260px;
+	margin: 5.9px;
+	border: 1px solid #bbb;
+	float:left;
+}
+.portfolio-upload-work-divs {
+	/*border-top: 2px solid black;*/
+	/*border-bottom: 2px solid black;*/
+	/*border:2px solid black;*/
+	padding: 5px;
+	padding-bottom: 16px;
+	margin: 25px;
+	min-width: 150px;
+	/*max-width: 900px;*/
+	background-color:#6c7099;
+	border-radius:10px;
+}
+
+#fileUpload{
+	margin-bottom: 20px;
+}
+#clearBoth {
+	clear:both;
+}
+
+img {
+	margin: 5px;
+}
+
+li {
+	float: left;
+}
+
